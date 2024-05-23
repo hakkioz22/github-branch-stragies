@@ -1,0 +1,17 @@
+name: Merge to Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  notify-success:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Display success message
+        run: echo "Success: Code has been merged to the master branch!"
